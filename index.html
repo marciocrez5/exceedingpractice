@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exceeding Practice | Early Childhood QIP & Self-Assessment Consulting</title>
+  <meta name="description" content="Expert consulting for Australian early childhood services — professional feedback on your QIP and self-assessment to help you move from Meeting to Exceeding the National Quality Standard." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #FAF6F1;
+      color: #3D2F28;
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    /* ===== COLOUR PALETTE ===== */
+    :root {
+      --terra:    #C4694A;
+      --terra-lt: #E8907A;
+      --terra-dk: #A3503A;
+      --sage:     #7A9E7E;
+      --sage-lt:  #A8C5AB;
+      --sage-dk:  #5A7E5E;
+      --cream:    #FAF6F1;
+      --cream-dk: #F0E9DE;
+      --warm-white: #FFFCF9;
+      --text:     #3D2F28;
+      --text-lt:  #6B5248;
+      --border:   #E0D3C8;
+    }
+
+    /* ===== UTILITY ===== */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 96px 0; }
+    .section--alt { background: var(--cream-dk); }
+    .section--white { background: var(--warm-white); }
+    .tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--terra);
+      margin-bottom: 14px;
+    }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; }
+    h2 { font-size: clamp(28px, 4vw, 42px); font-weight: 700; line-height: 1.25; margin-bottom: 16px; color: var(--text); }
+    h3 { font-size: 22px; font-weight: 600; margin-bottom: 10px; color: var(--text); }
+    p { color: var(--text-lt); }
+    a { color: inherit; text-decoration: none; }
+
+    /* ===== NAV ===== */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(250, 246, 241, 0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+    }
+    .nav-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 68px;
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px; font-weight: 700;
+      color: var(--terra-dk);
+      letter-spacing: -0.3px;
+    }
+    .nav-logo span { color: var(--sage-dk); }
+    .nav-links { display: flex; gap: 32px; align-items: center; }
+    .nav-links a {
+      font-size: 14px; font-weight: 500;
+      color: var(--text-lt);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--terra); }
+    .btn-nav {
+      background: var(--terra);
+      color: #fff !important;
+      padding: 10px 22px;
+      border-radius: 50px;
+      font-size: 14px !important;
+      font-weight: 600 !important;
+      transition: background 0.2s, transform 0.15s !important;
+    }
+    .btn-nav:hover { background: var(--terra-dk) !important; transform: translateY(-1px); }
+
+    /* ===== HERO ===== */
+    .hero {
+      padding: 148px 0 96px;
+      background: linear-gradient(160deg, var(--cream-dk) 0%, var(--cream) 60%);
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; top: -80px; right: -120px;
+      width: 560px; height: 560px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(196,105,74,0.10) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute; bottom: -60px; left: -80px;
+      width: 400px; height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(122,158,126,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(122,158,126,0.15);
+      border: 1px solid rgba(122,158,126,0.35);
+      border-radius: 50px;
+      padding: 6px 16px;
+      font-size: 13px; font-weight: 500; color: var(--sage-dk);
+      margin-bottom: 20px;
+    }
+    .hero-badge::before {
+      content: ''; display: inline-block;
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--sage);
+    }
+    .hero h1 {
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: 700; line-height: 1.15;
+      color: var(--text);
+      margin-bottom: 22px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--terra);
+    }
+    .hero p.lead {
+      font-size: 18px; line-height: 1.75;
+      color: var(--text-lt);
+      margin-bottom: 36px;
+      max-width: 480px;
+    }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--terra);
+      color: #fff;
+      padding: 15px 30px;
+      border-radius: 50px;
+      font-size: 15px; font-weight: 600;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(196,105,74,0.25);
+    }
+    .btn-primary:hover { background: var(--terra-dk); transform: translateY(-2px); box-shadow: 0 6px 28px rgba(196,105,74,0.35); }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: transparent;
+      color: var(--text);
+      padding: 15px 28px;
+      border-radius: 50px;
+      border: 2px solid var(--border);
+      font-size: 15px; font-weight: 600;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-secondary:hover { border-color: var(--terra); color: var(--terra); }
+    .hero-visual {
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .stat-card {
+      background: var(--warm-white);
+      border-radius: 16px;
+      padding: 24px 28px;
+      border: 1px solid var(--border);
+      box-shadow: 0 2px 16px rgba(61,47,40,0.06);
+    }
+    .stat-card .num {
+      font-family: 'Playfair Display', serif;
+      font-size: 40px; font-weight: 700;
+      color: var(--terra);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .stat-card p { font-size: 14px; color: var(--text-lt); }
+    .stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .nqf-badge {
+      background: linear-gradient(135deg, var(--sage), var(--sage-dk));
+      border-radius: 16px;
+      padding: 20px 24px;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 1.6;
+    }
+    .nqf-badge strong { display: block; font-size: 15px; margin-bottom: 4px; font-family: 'Playfair Display', serif; }
+
+    /* ===== TRUST STRIP ===== */
+    .trust-strip {
+      background: var(--warm-white);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 28px 0;
+    }
+    .trust-inner {
+      display: flex; align-items: center; justify-content: center; gap: 48px; flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 14px; font-weight: 500; color: var(--text-lt);
+    }
+    .trust-icon {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 17px;
+    }
+    .trust-icon--sage { background: rgba(122,158,126,0.15); }
+    .trust-icon--terra { background: rgba(196,105,74,0.12); }
+
+    /* ===== EXPERIENCE ===== */
+    .exp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+    .exp-text h2 { margin-bottom: 20px; }
+    .exp-text p { margin-bottom: 18px; font-size: 16px; }
+    .highlight-quote {
+      background: var(--cream-dk);
+      border-left: 4px solid var(--terra);
+      border-radius: 0 12px 12px 0;
+      padding: 20px 24px;
+      margin: 28px 0;
+      font-size: 17px;
+      font-style: italic;
+      color: var(--text);
+      font-family: 'Playfair Display', serif;
+      line-height: 1.6;
+    }
+    .exp-pillars { display: flex; flex-direction: column; gap: 20px; }
+    .pillar {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      display: flex; gap: 16px; align-items: flex-start;
+      transition: box-shadow 0.2s;
+    }
+    .pillar:hover { box-shadow: 0 4px 24px rgba(61,47,40,0.09); }
+    .pillar-icon {
+      width: 44px; height: 44px; flex-shrink: 0;
+      border-radius: 12px;
+      background: rgba(196,105,74,0.12);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+    }
+    .pillar h3 { font-size: 16px; margin-bottom: 4px; }
+    .pillar p { font-size: 14px; }
+
+    /* ===== HOW IT WORKS ===== */
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 56px; }
+    .step {
+      text-align: center;
+      position: relative;
+    }
+    .step:not(:last-child)::after {
+      content: '→';
+      position: absolute; right: -20px; top: 22px;
+      font-size: 22px; color: var(--border);
+    }
+    .step-num {
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      background: var(--terra);
+      color: #fff;
+      font-family: 'Playfair Display', serif;
+      font-size: 22px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 18px;
+      box-shadow: 0 4px 16px rgba(196,105,74,0.3);
+    }
+    .step h3 { font-size: 18px; margin-bottom: 10px; }
+    .step p { font-size: 14px; max-width: 240px; margin: 0 auto; }
+
+    /* ===== SERVICES ===== */
+    .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 56px; }
+    .service-card {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 40px 36px;
+      position: relative;
+      overflow: hidden;
+      transition: box-shadow 0.25s, transform 0.2s;
+    }
+    .service-card:hover { box-shadow: 0 8px 40px rgba(61,47,40,0.12); transform: translateY(-3px); }
+    .service-card--featured {
+      border-color: var(--sage);
+      border-width: 2px;
+    }
+    .service-card--featured::before {
+      content: 'Most Comprehensive';
+      position: absolute; top: 20px; right: 20px;
+      background: var(--sage);
+      color: #fff;
+      font-size: 11px; font-weight: 600;
+      letter-spacing: 1px; text-transform: uppercase;
+      padding: 5px 12px; border-radius: 50px;
+    }
+    .service-accent {
+      width: 52px; height: 52px;
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+    .service-accent--terra { background: rgba(196,105,74,0.13); }
+    .service-accent--sage  { background: rgba(122,158,126,0.15); }
+    .service-price {
+      font-family: 'Playfair Display', serif;
+      font-size: 44px; font-weight: 700;
+      color: var(--terra);
+      line-height: 1;
+      margin: 14px 0 6px;
+    }
+    .service-price span { font-size: 18px; font-weight: 400; color: var(--text-lt); }
+    .service-turnaround {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 13px; color: var(--sage-dk); font-weight: 500;
+      margin-bottom: 22px;
+    }
+    .service-card p.desc { font-size: 15px; margin-bottom: 24px; line-height: 1.7; }
+    .feature-list { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px; }
+    .feature-list li {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: 14px; color: var(--text-lt);
+    }
+    .feature-list li::before {
+      content: '✓';
+      color: var(--sage);
+      font-weight: 700;
+      font-size: 15px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .btn-service {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      width: 100%;
+      padding: 15px 24px;
+      border-radius: 50px;
+      font-size: 15px; font-weight: 600;
+      transition: all 0.2s;
+      border: none; cursor: pointer;
+    }
+    .btn-service--terra {
+      background: var(--terra); color: #fff;
+      box-shadow: 0 4px 20px rgba(196,105,74,0.25);
+    }
+    .btn-service--terra:hover { background: var(--terra-dk); transform: translateY(-1px); }
+    .btn-service--sage {
+      background: var(--sage); color: #fff;
+      box-shadow: 0 4px 20px rgba(122,158,126,0.25);
+    }
+    .btn-service--sage:hover { background: var(--sage-dk); transform: translateY(-1px); }
+
+    /* ===== QUALITY AREAS ===== */
+    .qa-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 48px; }
+    .qa-card {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .qa-card:hover { box-shadow: 0 4px 20px rgba(61,47,40,0.1); transform: translateY(-2px); }
+    .qa-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 13px; font-weight: 700;
+      color: var(--terra);
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .qa-card h3 { font-size: 14px; margin-bottom: 6px; line-height: 1.4; }
+    .qa-card p { font-size: 13px; }
+
+    /* ===== EXCEEDING THEMES ===== */
+    .themes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+    .theme-card {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px 28px;
+      text-align: center;
+      transition: box-shadow 0.2s;
+    }
+    .theme-card:hover { box-shadow: 0 4px 24px rgba(61,47,40,0.09); }
+    .theme-icon { font-size: 36px; margin-bottom: 16px; }
+    .theme-card h3 { font-size: 17px; margin-bottom: 10px; }
+    .theme-card p { font-size: 14px; }
+
+    /* ===== SUBMIT SECTION ===== */
+    .submit-section { background: var(--terra); padding: 80px 0; }
+    .submit-inner { text-align: center; }
+    .submit-inner h2 { color: #fff; margin-bottom: 14px; }
+    .submit-inner p { color: rgba(255,255,255,0.82); font-size: 18px; margin-bottom: 40px; }
+    .submit-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 800px; margin: 0 auto 40px; }
+    .submit-card {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.22);
+      border-radius: 16px;
+      padding: 32px 28px;
+      text-align: left;
+      color: #fff;
+      transition: background 0.2s;
+    }
+    .submit-card:hover { background: rgba(255,255,255,0.18); }
+    .submit-card .sc-price {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px; font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .submit-card .sc-title { font-size: 15px; font-weight: 600; opacity: 0.95; margin-bottom: 8px; }
+    .submit-card .sc-desc { font-size: 13px; opacity: 0.78; margin-bottom: 20px; }
+    .btn-submit-card {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: #fff; color: var(--terra-dk);
+      padding: 12px 22px;
+      border-radius: 50px;
+      font-size: 14px; font-weight: 600;
+      border: none; cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .btn-submit-card:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
+
+    /* ===== MODAL ===== */
+    .modal-overlay {
+      display: none;
+      position: fixed; inset: 0; z-index: 1000;
+      background: rgba(61,47,40,0.55);
+      backdrop-filter: blur(4px);
+      align-items: center; justify-content: center;
+      padding: 24px;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal {
+      background: var(--warm-white);
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 560px; width: 100%;
+      position: relative;
+      box-shadow: 0 24px 64px rgba(61,47,40,0.22);
+      animation: slideUp 0.3s ease;
+    }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .modal-close {
+      position: absolute; top: 18px; right: 20px;
+      background: none; border: none; cursor: pointer;
+      font-size: 22px; color: var(--text-lt);
+      line-height: 1; padding: 4px;
+    }
+    .modal-close:hover { color: var(--text); }
+    .modal h3 { font-size: 24px; margin-bottom: 8px; }
+    .modal .modal-sub { font-size: 14px; color: var(--text-lt); margin-bottom: 28px; }
+    .form-group { margin-bottom: 18px; }
+    .form-group label {
+      display: block;
+      font-size: 13px; font-weight: 600;
+      color: var(--text);
+      margin-bottom: 6px;
+      letter-spacing: 0.3px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      font-size: 14px;
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: #fff;
+      transition: border-color 0.2s;
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--terra); }
+    .form-group textarea { resize: vertical; min-height: 90px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .file-zone {
+      border: 2px dashed var(--border);
+      border-radius: 12px;
+      padding: 28px 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .file-zone:hover { border-color: var(--terra); background: rgba(196,105,74,0.04); }
+    .file-zone input[type="file"] { display: none; }
+    .file-zone .file-icon { font-size: 28px; margin-bottom: 8px; }
+    .file-zone p { font-size: 13px; color: var(--text-lt); margin: 0; }
+    .file-zone strong { color: var(--terra); }
+    .privacy-note {
+      display: flex; align-items: flex-start; gap: 8px;
+      background: rgba(122,158,126,0.10);
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-size: 13px; color: var(--text-lt);
+      margin: 20px 0;
+    }
+    .privacy-note::before { content: '🔒'; font-size: 15px; flex-shrink: 0; }
+    .btn-modal-submit {
+      width: 100%;
+      background: var(--terra);
+      color: #fff;
+      border: none;
+      padding: 15px;
+      border-radius: 50px;
+      font-size: 15px; font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-modal-submit:hover { background: var(--terra-dk); transform: translateY(-1px); }
+    .success-message {
+      display: none;
+      text-align: center;
+      padding: 20px 0;
+    }
+    .success-message .success-icon { font-size: 52px; margin-bottom: 16px; }
+    .success-message h3 { font-size: 22px; margin-bottom: 10px; }
+    .success-message p { font-size: 15px; color: var(--text-lt); }
+
+    /* ===== CONFIDENTIALITY ===== */
+    .conf-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+    .conf-card {
+      text-align: center;
+      padding: 32px 24px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: var(--warm-white);
+    }
+    .conf-icon { font-size: 36px; margin-bottom: 14px; }
+    .conf-card h3 { font-size: 17px; margin-bottom: 10px; }
+    .conf-card p { font-size: 14px; }
+
+    /* ===== FAQ ===== */
+    .faq-list { max-width: 720px; margin: 48px auto 0; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      background: var(--warm-white);
+    }
+    .faq-q {
+      width: 100%; background: none; border: none;
+      padding: 20px 24px;
+      text-align: left;
+      font-size: 16px; font-weight: 500;
+      color: var(--text); font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 16px;
+    }
+    .faq-q:hover { background: var(--cream-dk); }
+    .faq-chevron { font-size: 18px; transition: transform 0.3s; flex-shrink: 0; }
+    .faq-a {
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s;
+      padding: 0 24px;
+      font-size: 15px; color: var(--text-lt); line-height: 1.75;
+    }
+    .faq-item.open .faq-a { max-height: 300px; padding: 0 24px 20px; }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #2E211C;
+      color: rgba(255,255,255,0.72);
+      padding: 56px 0 32px;
+    }
+    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+    .footer-brand .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px; font-weight: 700;
+      color: #fff; margin-bottom: 12px;
+    }
+    .footer-brand .logo span { color: var(--sage-lt); }
+    .footer-brand p { font-size: 14px; line-height: 1.7; max-width: 280px; }
+    .footer-col h4 {
+      font-size: 13px; font-weight: 600;
+      letter-spacing: 1.5px; text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 16px;
+    }
+    .footer-col a {
+      display: block;
+      font-size: 14px;
+      color: rgba(255,255,255,0.72);
+      margin-bottom: 10px;
+      transition: color 0.2s;
+    }
+    .footer-col a:hover { color: var(--terra-lt); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.10);
+      padding-top: 28px;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+      font-size: 13px;
+    }
+    .footer-ref {
+      font-size: 12px; color: rgba(255,255,255,0.4);
+      max-width: 600px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-visual { display: none; }
+      .exp-grid, .services-grid, .submit-cards { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr; }
+      .step:not(:last-child)::after { display: none; }
+      .qa-grid { grid-template-columns: repeat(2, 1fr); }
+      .themes-grid { grid-template-columns: 1fr; }
+      .conf-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 600px) {
+      .section { padding: 64px 0; }
+      .qa-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .stat-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">Exceeding<span>Practice</span></div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#nqs">The NQS</a>
+      <a href="#faq">FAQs</a>
+      <a href="#submit" class="btn-nav">Submit Documents</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">Aligned with the National Quality Framework</div>
+        <h1>From <em>Meeting</em> to<br/>Truly <em>Exceeding</em></h1>
+        <p class="lead">Expert, confidential feedback on your Quality Improvement Plan and self-assessment — helping Australian early childhood services reach their full potential under the NQS.</p>
+        <div class="hero-actions">
+          <a href="#submit" class="btn-primary">
+            <span>Submit Your Documents</span>
+            <span>→</span>
+          </a>
+          <a href="#services" class="btn-secondary">View Services</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="nqf-badge">
+          <strong>National Quality Framework</strong>
+          Aligned with the NQS, EYLF v2.0, My Time, Our Place, and ACECQA guidelines for evidence-based improvement.
+        </div>
+        <div class="stat-row">
+          <div class="stat-card">
+            <div class="num">7</div>
+            <p>Quality Areas covered in full</p>
+          </div>
+          <div class="stat-card">
+            <div class="num">3</div>
+            <p>Exceeding themes evidenced per area</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="num" style="font-size:28px;color:var(--sage);">2 Weeks</div>
+          <p>Turnaround time for your detailed, written feedback report</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TRUST STRIP ===== -->
+<div class="trust-strip">
+  <div class="container">
+    <div class="trust-inner">
+      <div class="trust-item">
+        <div class="trust-icon trust-icon--sage">🔒</div>
+        <span>100% Confidential</span>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon trust-icon--terra">📋</div>
+        <span>NQF-Aligned Feedback</span>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon trust-icon--sage">📅</div>
+        <span>2-Week Turnaround</span>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon trust-icon--terra">🏆</div>
+        <span>Meeting → Exceeding</span>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon trust-icon--sage">✍️</div>
+        <span>Written Report Delivered</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== EXPERIENCE ===== -->
+<section class="section section--white" id="experience">
+  <div class="container">
+    <div class="exp-grid">
+      <div class="exp-text">
+        <span class="tag">Our Experience</span>
+        <h2>Supporting Services<br/>to Reach Exceeding</h2>
+        <p>We have worked directly with long day care, family day care, outside school hours care, and preschool services across Australia — supporting educators, nominated supervisors, and approved providers to build strong, evidence-rich quality improvement practices.</p>
+        <p>Our experience spans the full breadth of the National Quality Standard, with deep knowledge of what regulatory authorities look for during an assessment and rating visit — and what genuinely separates a <em>Meeting</em> rating from an <em>Exceeding</em> one.</p>
+        <div class="highlight-quote">
+          "Exceeding is not about doing more — it's about thinking more critically, reflecting more deeply, and involving families and community in a way that's woven into your everyday practice."
+        </div>
+        <p>We understand the time pressures on educators and leaders. That's why our feedback is practical, specific, and written to your service's context — not generic advice, but actionable guidance you can apply immediately.</p>
+      </div>
+      <div class="exp-pillars">
+        <div class="pillar">
+          <div class="pillar-icon">📖</div>
+          <div>
+            <h3>Deep NQF Knowledge</h3>
+            <p>Comprehensive understanding of the NQS, the Education and Care Services National Law and Regulations, EYLF v2.0, and ACECQA's Guide to the NQF.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon">🎯</div>
+          <div>
+            <h3>Practical, Targeted Feedback</h3>
+            <p>Every piece of feedback is linked to specific standards, elements, and exceeding themes — so you always know exactly where you stand and what to focus on.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon">💡</div>
+          <div>
+            <h3>Real Examples & Ideas</h3>
+            <p>We don't just tell you what to improve — we show you how, with concrete examples of strong QIP goals, success measures, critical reflection, and evidence of the three Exceeding themes.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon">🤝</div>
+          <div>
+            <h3>Supportive, Non-Judgemental</h3>
+            <p>Our approach is collaborative and encouraging. We meet services where they are and provide feedback designed to build confidence and capability across your team.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section class="section section--alt" id="how-it-works">
+  <div class="container">
+    <div style="text-align:center">
+      <span class="tag">Simple Process</span>
+      <h2>How It Works</h2>
+      <p style="max-width:560px; margin:0 auto; font-size:17px;">Three straightforward steps to receive your personalised, expert feedback.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Submit & Pay</h3>
+        <p>Upload your QIP, self-assessment, or key practice documents securely through our submission form and complete your payment online.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Expert Review</h3>
+        <p>Your documents are reviewed in detail against the NQS, relevant standards, and the three Exceeding themes across all seven Quality Areas.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Receive Your Report</h3>
+        <p>Within two weeks, receive a comprehensive written feedback report with specific suggestions, examples, and improvement strategies tailored to your service.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="section section--white" id="services">
+  <div class="container">
+    <div style="text-align:center">
+      <span class="tag">Our Services</span>
+      <h2>Choose Your Review</h2>
+      <p style="max-width:560px; margin:0 auto; font-size:17px;">Two focused consulting services designed specifically for Australian early childhood education and care services.</p>
+    </div>
+    <div class="services-grid">
+
+      <!-- QIP Review -->
+      <div class="service-card">
+        <div class="service-accent service-accent--terra">📝</div>
+        <h3>QIP Review & Feedback</h3>
+        <div class="service-price">$250 <span>AUD</span></div>
+        <div class="service-turnaround">⏱ 2-week turnaround</div>
+        <p class="desc">Submit your current Quality Improvement Plan or the goals your service has been working on. Receive detailed, written feedback to sharpen your intent, strengthen your strategies, and build evidence that truly reflects your service's improvement journey.</p>
+        <ul class="feature-list">
+          <li>Review of your QIP goals against the relevant NQS standard and elements</li>
+          <li>Feedback on the clarity and specificity of each identified issue or area of improvement</li>
+          <li>Suggestions for stronger, measurable success indicators</li>
+          <li>Revised examples of improvement steps and timeframes</li>
+          <li>Guidance on linking goals to your reflective practices and team discussions</li>
+          <li>Tips to demonstrate continuous improvement between ratings</li>
+        </ul>
+        <button class="btn-service btn-service--terra" onclick="openModal('qip')">
+          Submit QIP for Review →
+        </button>
+      </div>
+
+      <!-- Self-Assessment Review -->
+      <div class="service-card service-card--featured">
+        <div class="service-accent service-accent--sage">🏆</div>
+        <h3>Self-Assessment Review</h3>
+        <div class="service-price">$500 <span>AUD</span></div>
+        <div class="service-turnaround">⏱ 2-week turnaround</div>
+        <p class="desc">Submit your current key practice statements for one or more Quality Areas. Receive expert feedback on the depth, language, and evidence of your practices — including targeted guidance on how to demonstrate all three Exceeding themes across your service.</p>
+        <ul class="feature-list">
+          <li>In-depth review of your key practice statements for each Quality Area</li>
+          <li>Specific feedback on how to evidence all three Exceeding themes</li>
+          <li>Additional examples of strong practice statements for each Quality Area</li>
+          <li>Guidance on embedding critical reflection into your documented practices</li>
+          <li>Ideas for meaningful family and community engagement evidence</li>
+          <li>Suggestions to show practice is embedded into service operations</li>
+          <li>Tips aligned with ACECQA's Guide to the NQF Exceeding descriptors</li>
+        </ul>
+        <button class="btn-service btn-service--sage" onclick="openModal('selfassessment')">
+          Submit Self-Assessment →
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== NQS QUALITY AREAS ===== -->
+<section class="section section--alt" id="nqs">
+  <div class="container">
+    <div style="text-align:center">
+      <span class="tag">National Quality Standard</span>
+      <h2>All 7 Quality Areas Covered</h2>
+      <p style="max-width:600px; margin:0 auto; font-size:16px;">Our review spans every Quality Area of the NQS, ensuring your service has a holistic, confident improvement plan — not just isolated goals.</p>
+    </div>
+    <div class="qa-grid">
+      <div class="qa-card">
+        <div class="qa-num">QA 1</div>
+        <h3>Educational Program and Practice</h3>
+        <p>Programming, planning, documentation, and responsive practice aligned with EYLF v2.0 and the MTOP framework.</p>
+      </div>
+      <div class="qa-card">
+        <div class="qa-num">QA 2</div>
+        <h3>Children's Health and Safety</h3>
+        <p>Health promotion, safe environments, risk management, and emergency and medical procedure practices.</p>
+      </div>
+      <div class="qa-card">
+        <div class="qa-num">QA 3</div>
+        <h3>Physical Environment</h3>
+        <p>Indoor and outdoor environments that are inclusive, stimulating, and support children's learning and agency.</p>
+      </div>
+      <div class="qa-card">
+        <div class="qa-num">QA 4</div>
+        <h3>Staffing Arrangements</h3>
+        <p>Educator qualifications, professional development, mentoring, and leadership capacity-building practices.</p>
+      </div>
+      <div class="qa-card">
+        <div class="qa-num">QA 5</div>
+        <h3>Relationships with Children</h3>
+        <p>Respectful, responsive interactions that foster belonging, wellbeing, and a strong sense of identity.</p>
+      </div>
+      <div class="qa-card">
+        <div class="qa-num">QA 6</div>
+        <h3>Collaborative Partnerships</h3>
+        <p>Genuine partnerships with families and the community that inform and enrich the service's practices.</p>
+      </div>
+      <div class="qa-card">
+        <div class="qa-num">QA 7</div>
+        <h3>Governance and Leadership</h3>
+        <p>Effective leadership, governance, and management practices that support ongoing improvement and compliance.</p>
+      </div>
+      <div class="qa-card" style="background: rgba(196,105,74,0.07); border-color: rgba(196,105,74,0.25);">
+        <div class="qa-num" style="color:var(--sage-dk)">NQF</div>
+        <h3>Fully NQF-Aligned</h3>
+        <p>All feedback references ACECQA's Guide to the NQF, National Law and Regulations, and current approved learning frameworks.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EXCEEDING THEMES ===== -->
+<section class="section section--white">
+  <div class="container">
+    <div style="text-align:center">
+      <span class="tag">Exceeding NQS</span>
+      <h2>The Three Exceeding Themes</h2>
+      <p style="max-width:580px; margin:0 auto; font-size:16px;">For a service to be rated <strong>Exceeding NQS</strong> in a Quality Area, it must demonstrate all three of the following themes. Our self-assessment review helps you evidence each one confidently.</p>
+    </div>
+    <div class="themes-grid">
+      <div class="theme-card">
+        <div class="theme-icon">⚙️</div>
+        <h3>Embedded in Operations</h3>
+        <p>Practice is consistent, sustainable, and visible across the whole service — not just in isolated incidents or individual educator behaviours.</p>
+      </div>
+      <div class="theme-card">
+        <div class="theme-icon">🔍</div>
+        <h3>Informed by Critical Reflection</h3>
+        <p>Practice is regularly and genuinely reflected upon by educators and leaders, resulting in meaningful changes to how the service operates.</p>
+      </div>
+      <div class="theme-card">
+        <div class="theme-icon">🤝</div>
+        <h3>Shaped by Meaningful Engagement</h3>
+        <p>Practice is authentically shaped by engagement with families and/or the broader community — their voices genuinely inform decisions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONFIDENTIALITY ===== -->
+<section class="section section--alt" id="confidentiality">
+  <div class="container">
+    <div style="text-align:center">
+      <span class="tag">Your Privacy Matters</span>
+      <h2>Complete Confidentiality,<br/>Always</h2>
+      <p style="max-width:560px; margin:0 auto; font-size:17px;">We take the privacy of your service's information seriously. Every document you share is handled with the highest level of discretion and professionalism.</p>
+    </div>
+    <div class="conf-grid">
+      <div class="conf-card">
+        <div class="conf-icon">🔒</div>
+        <h3>Secure Submission</h3>
+        <p>All documents are submitted through a secure channel. Your files are never shared with third parties under any circumstances.</p>
+      </div>
+      <div class="conf-card">
+        <div class="conf-icon">🗂️</div>
+        <h3>Used Only for Your Review</h3>
+        <p>Your QIP, self-assessment, and service information are used exclusively to prepare your personalised feedback. Nothing is retained beyond the completion of your review.</p>
+      </div>
+      <div class="conf-card">
+        <div class="conf-icon">🤫</div>
+        <h3>No Identifying Information Shared</h3>
+        <p>Your service name, details, and documents will never be referenced in any public material, examples, or marketing. Your work stays private.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SUBMIT ===== -->
+<section class="submit-section" id="submit">
+  <div class="container">
+    <div class="submit-inner">
+      <span class="tag" style="color:rgba(255,255,255,0.7)">Get Started Today</span>
+      <h2>Ready to Start Exceeding Practice?</h2>
+      <p>Select a service below, upload your documents, and receive your comprehensive feedback within two weeks.</p>
+      <div class="submit-cards">
+        <div class="submit-card">
+          <div class="sc-price">$250</div>
+          <div class="sc-title">QIP Review & Feedback</div>
+          <div class="sc-desc">Submit your QIP or current goals. Receive detailed written feedback within 2 weeks.</div>
+          <button class="btn-submit-card" onclick="openModal('qip')">
+            📝 Submit QIP
+          </button>
+        </div>
+        <div class="submit-card">
+          <div class="sc-price">$500</div>
+          <div class="sc-title">Self-Assessment Review</div>
+          <div class="sc-desc">Submit your key practice statements and receive guidance on evidencing all three Exceeding themes.</div>
+          <button class="btn-submit-card" onclick="openModal('selfassessment')">
+            🏆 Submit Self-Assessment
+          </button>
+        </div>
+      </div>
+      <p style="font-size:13px; opacity:0.65; margin-top:8px;">After submitting, you will receive a confirmation email with payment instructions within 24 hours. Your review begins once payment is confirmed.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section section--white" id="faq">
+  <div class="container">
+    <div style="text-align:center">
+      <span class="tag">Questions</span>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What documents should I submit for a QIP review?
+          <span class="faq-chevron">⌃</span>
+        </button>
+        <div class="faq-a">Submit your current Quality Improvement Plan — this can be your full document or just the goals and improvement areas you've been actively working on. The more context you provide (e.g., previous rating, focus areas), the more tailored your feedback will be. You can submit in any format: Word, PDF, or a direct export from your QIP management platform.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What should I include in a self-assessment submission?
+          <span class="faq-chevron">⌃</span>
+        </button>
+        <div class="faq-a">Submit your current key practice statements for one or more Quality Areas. You may also include your self-assessment ratings (Meeting, Exceeding, etc.) and any supporting notes or reflections. If you are preparing for an upcoming assessment and rating visit, include as many Quality Areas as possible to get the most comprehensive feedback.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          How does payment work?
+          <span class="faq-chevron">⌃</span>
+        </button>
+        <div class="faq-a">After you submit your documents, you will receive a confirmation email within 24 hours with a secure payment link. Your review begins once payment has been confirmed. We accept all major payment methods. No review is commenced without completed payment.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What will my feedback report look like?
+          <span class="faq-chevron">⌃</span>
+        </button>
+        <div class="faq-a">You will receive a detailed written report, structured around your submitted documents. For QIP reviews, feedback is organised by goal — covering clarity of the identified issue, suggested improvement steps, success measures, and timeframes. For self-assessment reviews, feedback is organised by Quality Area and covers the strength of your key practice statements, how to better evidence the three Exceeding themes, and examples of stronger practice language.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Is my service's information kept confidential?
+          <span class="faq-chevron">⌃</span>
+        </button>
+        <div class="faq-a">Absolutely. All documents and service information submitted to us are treated with complete confidentiality. Your documents are used solely for preparing your personalised feedback report and are not retained, referenced publicly, or shared with any third party — ever.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Can I submit for just one or two Quality Areas?
+          <span class="faq-chevron">⌃</span>
+        </button>
+        <div class="faq-a">Yes. For the self-assessment review, you can submit key practices for as many or as few Quality Areas as you choose. If you are focusing your preparation on specific areas, submitting just those is absolutely fine. The fee is the same regardless of the number of Quality Areas included.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Do you provide support for all service types?
+          <span class="faq-chevron">⌃</span>
+        </button>
+        <div class="faq-a">Yes. We work with all approved education and care service types regulated under the National Quality Framework, including long day care, family day care, outside school hours care (OSHC), preschool and kindergarten, and mobile services. Feedback is always contextualised to your specific service type and the relevant approved learning framework (EYLF v2.0 or My Time, Our Place).</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">Exceeding<span>Practice</span></div>
+        <p>Expert consulting for Australian early childhood services — helping your team move from Meeting to Exceeding the National Quality Standard.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="#services">QIP Review — $250</a>
+        <a href="#services">Self-Assessment Review — $500</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#submit">Submit Documents</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact & Resources</h4>
+        <a href="mailto:info@exceedingpractice.com.au">info@exceedingpractice.com.au</a>
+        <a href="https://www.acecqa.gov.au" target="_blank" rel="noopener">ACECQA</a>
+        <a href="https://www.acecqa.gov.au/nqf/about" target="_blank" rel="noopener">About the NQF</a>
+        <a href="https://www.acecqa.gov.au/assessment/guide-to-the-nqf" target="_blank" rel="noopener">Guide to the NQF</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Exceeding Practice. All rights reserved.</span>
+      <div class="footer-ref">
+        Services informed by the National Quality Framework (NQF), the National Quality Standard (NQS), the Education and Care Services National Law 2010, the Education and Care Services National Regulations 2011, EYLF v2.0, My Time, Our Place v2.0, and ACECQA's Guide to the NQF.
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== SUBMISSION MODAL ===== -->
+<div class="modal-overlay" id="submitModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div id="modal-form-content">
+      <h3 id="modal-title">Submit Your Documents</h3>
+      <p class="modal-sub" id="modal-sub">Complete the form below and we'll confirm your submission within 24 hours with payment details.</p>
+      <form id="submissionForm" onsubmit="handleSubmit(event)">
+        <input type="hidden" id="service-type" name="service_type" value="" />
+        <div class="form-row">
+          <div class="form-group">
+            <label for="contact-name">Your Name *</label>
+            <input type="text" id="contact-name" name="name" required placeholder="Jane Smith" />
+          </div>
+          <div class="form-group">
+            <label for="service-name">Service Name *</label>
+            <input type="text" id="service-name" name="service_name" required placeholder="Sunshine Early Learning" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="contact-email">Email Address *</label>
+            <input type="email" id="contact-email" name="email" required placeholder="you@yourservice.com.au" />
+          </div>
+          <div class="form-group">
+            <label for="service-type-select">Service Type *</label>
+            <select id="service-type-select" name="service_type_detail" required>
+              <option value="" disabled selected>Select type…</option>
+              <option>Long Day Care</option>
+              <option>Family Day Care</option>
+              <option>Outside School Hours Care</option>
+              <option>Preschool / Kindergarten</option>
+              <option>Mobile / Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="selected-service">Service Selected *</label>
+          <select id="selected-service" name="selected_service" required>
+            <option value="" disabled selected>Select a service…</option>
+            <option value="qip">QIP Review & Feedback — $250</option>
+            <option value="selfassessment">Self-Assessment Review — $500</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Upload Your Documents *</label>
+          <div class="file-zone" onclick="document.getElementById('file-input').click()">
+            <input type="file" id="file-input" name="documents" multiple accept=".pdf,.doc,.docx,.xls,.xlsx,.txt" onchange="showFileName(this)" />
+            <div class="file-icon">📎</div>
+            <p><strong>Click to upload</strong> or drag and drop your files here</p>
+            <p style="margin-top:6px; font-size:12px;">PDF, Word, or Excel — up to 25MB per file</p>
+            <p id="file-name-display" style="margin-top:8px; color:var(--terra); font-weight:500; font-size:13px;"></p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="context-notes">Additional Context <span style="font-weight:400; color:var(--text-lt)">(optional)</span></label>
+          <textarea id="context-notes" name="notes" placeholder="E.g. your current rating, upcoming assessment date, specific areas you'd like us to focus on, or any context that would help us tailor your feedback."></textarea>
+        </div>
+        <div class="privacy-note">
+          All documents and service information are kept strictly confidential. Your details will never be shared with third parties or used in any public material.
+        </div>
+        <button type="submit" class="btn-modal-submit">Send Submission →</button>
+      </form>
+    </div>
+    <div class="success-message" id="success-message">
+      <div class="success-icon">✅</div>
+      <h3>Submission Received!</h3>
+      <p>Thank you for submitting your documents. You'll receive a confirmation email at the address you provided within <strong>24 hours</strong>, along with your secure payment link.<br/><br/>Your review begins once payment is confirmed. We look forward to supporting your service.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Modal open/close
+  function openModal(type) {
+    const modal = document.getElementById('submitModal');
+    const titleEl = document.getElementById('modal-title');
+    const subEl = document.getElementById('modal-sub');
+    const selectEl = document.getElementById('selected-service');
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    if (type === 'qip') {
+      titleEl.textContent = 'Submit Your QIP for Review';
+      subEl.textContent = 'QIP Review & Feedback — $250 AUD. Complete the form and we\'ll confirm your submission within 24 hours.';
+      selectEl.value = 'qip';
+    } else {
+      titleEl.textContent = 'Submit Your Self-Assessment';
+      subEl.textContent = 'Self-Assessment Review — $500 AUD. Complete the form and we\'ll confirm your submission within 24 hours.';
+      selectEl.value = 'selfassessment';
+    }
+  }
+  function closeModal() {
+    document.getElementById('submitModal').classList.remove('open');
+    document.body.style.overflow = '';
+    document.getElementById('modal-form-content').style.display = 'block';
+    document.getElementById('success-message').style.display = 'none';
+    document.getElementById('submissionForm').reset();
+    document.getElementById('file-name-display').textContent = '';
+  }
+  document.getElementById('submitModal').addEventListener('click', function(e) {
+    if (e.target === this) closeModal();
+  });
+
+  // File name display
+  function showFileName(input) {
+    const display = document.getElementById('file-name-display');
+    if (input.files && input.files.length > 0) {
+      const names = Array.from(input.files).map(f => f.name).join(', ');
+      display.textContent = '✓ ' + names;
+    }
+  }
+
+  // Form submit → success message
+  function handleSubmit(e) {
+    e.preventDefault();
+    const form = document.getElementById('modal-form-content');
+    const success = document.getElementById('success-message');
+    // Build mailto link
+    const name = document.getElementById('contact-name').value;
+    const service = document.getElementById('service-name').value;
+    const email = document.getElementById('contact-email').value;
+    const serviceType = document.getElementById('service-type-select').value;
+    const selected = document.getElementById('selected-service').value;
+    const notes = document.getElementById('context-notes').value;
+    const subject = encodeURIComponent('Exceeding Practice — Document Submission: ' + service);
+    const body = encodeURIComponent(
+      'New submission received:\n\n' +
+      'Name: ' + name + '\n' +
+      'Service Name: ' + service + '\n' +
+      'Email: ' + email + '\n' +
+      'Service Type: ' + serviceType + '\n' +
+      'Service Selected: ' + (selected === 'qip' ? 'QIP Review & Feedback ($250)' : 'Self-Assessment Review ($500)') + '\n\n' +
+      'Additional Context:\n' + (notes || 'None provided') + '\n\n' +
+      '(Please attach your documents to this email if not already attached.)'
+    );
+    window.location.href = 'mailto:info@exceedingpractice.com.au?subject=' + subject + '&body=' + body;
+    form.style.display = 'none';
+    success.style.display = 'block';
+  }
+
+  // FAQ accordion
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  }
+
+  // Smooth nav highlight on scroll (optional enhancement)
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    nav.style.boxShadow = window.scrollY > 10 ? '0 2px 20px rgba(61,47,40,0.08)' : 'none';
+  });
+</script>
+</body>
+</html>
