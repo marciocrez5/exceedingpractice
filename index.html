@@ -779,25 +779,30 @@
     <div style="text-align:center">
       <span class="tag">Simple Process</span>
       <h2>How It Works</h2>
-      <p style="max-width:560px; margin:0 auto; font-size:17px;">Three straightforward steps to receive your personalised, expert feedback.</p>
+      <p style="max-width:560px; margin:0 auto; font-size:17px;">Four simple steps to receive your personalised, expert feedback.</p>
     </div>
     <div class="steps">
       <div class="step">
         <div class="step-num">1</div>
-        <h3>Submit & Pay</h3>
-        <p>Upload your QIP, self-assessment, or key practice documents securely through our submission form and complete your payment online.</p>
+        <h3>Submit Your Documents</h3>
+        <p>Upload your QIP, self-assessment, or key practice documents securely through our submission form. No payment required at this stage.</p>
       </div>
       <div class="step">
         <div class="step-num">2</div>
-        <h3>Expert Review</h3>
-        <p>Your documents are reviewed in detail against the NQS, relevant standards, and the three Exceeding themes across all seven Quality Areas.</p>
+        <h3>Receive Payment Details</h3>
+        <p>Within 24 hours, you'll receive a confirmation email with a secure payment link. Your service details remain strictly confidential throughout.</p>
       </div>
       <div class="step">
         <div class="step-num">3</div>
-        <h3>Receive Your Report</h3>
-        <p>Within two weeks, receive a comprehensive written feedback report with specific suggestions, examples, and improvement strategies tailored to your service.</p>
+        <h3>Complete Payment</h3>
+        <p>Once payment is confirmed, your review officially begins. You'll receive acknowledgment that your documents are in the queue for expert review.</p>
       </div>
-    </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h3>Receive Your Report</h3>
+        <p>Within two weeks of payment, receive a comprehensive written feedback report with specific suggestions, examples, and improvement strategies tailored to your service.</p>
+      </div>
+    </div></div>
   </div>
 </section>
 
@@ -971,7 +976,7 @@
     <div class="submit-inner">
       <span class="tag" style="color:rgba(255,255,255,0.7)">Get Started Today</span>
       <h2>Ready to Start Exceeding Practice?</h2>
-      <p>Select a service below, upload your documents, and receive your comprehensive feedback within two weeks.</p>
+      <p>Select a service below and submit your documents. We'll send you payment details within 24 hours — your review begins once payment is confirmed.</p>
       <div class="submit-cards">
         <div class="submit-card">
           <div class="sc-price">$250</div>
@@ -990,7 +995,7 @@
           </button>
         </div>
       </div>
-      <p style="font-size:13px; opacity:0.65; margin-top:8px;">After submitting, you will receive a confirmation email with payment instructions within 24 hours. Your review begins once payment is confirmed.</p>
+      <p style="font-size:14px; opacity:0.85; margin-top:12px; background:rgba(255,255,255,0.12); border-radius:8px; padding:10px 16px; display:inline-block;">💳 No payment is collected during submission. You will receive a secure payment link via email within 24 hours. Your review only begins once payment is confirmed.</p>
     </div>
   </div>
 </section>
@@ -1073,7 +1078,7 @@
       </div>
       <div class="footer-col">
         <h4>Contact & Resources</h4>
-        <a href="mailto:info@exceedingpractice.com.au">info@exceedingpractice.com.au</a>
+        <a href="mailto:info@exceedingpractice.com">info@exceedingpractice.com</a>
         <a href="https://www.acecqa.gov.au" target="_blank" rel="noopener">ACECQA</a>
         <a href="https://www.acecqa.gov.au/nqf/about" target="_blank" rel="noopener">About the NQF</a>
         <a href="https://www.acecqa.gov.au/assessment/guide-to-the-nqf" target="_blank" rel="noopener">Guide to the NQF</a>
@@ -1171,11 +1176,11 @@
     document.body.style.overflow = 'hidden';
     if (type === 'qip') {
       titleEl.textContent = 'Submit Your QIP for Review';
-      subEl.textContent = 'QIP Review & Feedback — $250 AUD. Complete the form and we\'ll confirm your submission within 24 hours.';
+      subEl.textContent = 'QIP Review & Feedback — $250 AUD. Submit your documents now and receive a secure payment link within 24 hours. Your review begins once payment is confirmed.';
       selectEl.value = 'qip';
     } else {
       titleEl.textContent = 'Submit Your Self-Assessment';
-      subEl.textContent = 'Self-Assessment Review — $500 AUD. Complete the form and we\'ll confirm your submission within 24 hours.';
+      subEl.textContent = 'Self-Assessment Review — $500 AUD. Submit your documents now and receive a secure payment link within 24 hours. Your review begins once payment is confirmed.';
       selectEl.value = 'selfassessment';
     }
   }
@@ -1223,7 +1228,7 @@
       'Additional Context:\n' + (notes || 'None provided') + '\n\n' +
       '(Please attach your documents to this email if not already attached.)'
     );
-    window.location.href = 'mailto:info@exceedingpractice.com.au?subject=' + subject + '&body=' + body;
+    window.location.href = 'mailto:info@exceedingpractice.com?subject=' + subject + '&body=' + body;
     form.style.display = 'none';
     success.style.display = 'block';
   }
